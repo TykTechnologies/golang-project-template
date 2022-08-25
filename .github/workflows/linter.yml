@@ -1,0 +1,14 @@
+name: Linter
+
+on:
+  push:
+    tags:
+      - v*
+    branches:
+      - master
+      - main
+  pull_request:
+
+jobs:
+  golangci:
+    uses: TykTechnologies/github-actions/.github/workflows/golangci.yaml@main
