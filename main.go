@@ -5,6 +5,6 @@ import (
   "os"
 )
 
-func() {
+func main() {
   fmt.Println("I am ", os.Args[0])
 }
