@@ -1,10 +1,10 @@
 package main
 
 import (
-  "fmt"
-  "os"
+	"fmt"
+	"os"
 )
 
 func main() {
-  fmt.Println("I am ", os.Args[0])
+	fmt.Println("I am ", os.Args[0])
 }
