@@ -63,7 +63,7 @@ linters-settings:
 
   goimports:
     # Put imports beginning with prefixes after 3rd-party packages; it's a comma-separated list of prefixes
-    local-prefixes: """"
+    local-prefixes: ""
 
   govet:
     # Report about shadowed variables
