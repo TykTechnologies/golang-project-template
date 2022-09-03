@@ -11,13 +11,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  linter:
-    runs-on: ubuntu-latest
-    steps:
-      - name: golangci
-        uses: TykTechnologies/github-actions/.github/workflows/golangci.yaml@main
-      - name: sonarcloud
-        uses: TykTechnologies/github-actions/.github/workflows/sonarcloud.yaml@main
-        with:
-          exclusions: ""
-        secrets: inherit
+  golangci:
+    uses: TykTechnologies/github-actions/.github/workflows/golangci.yaml@main
+  sonarcloud:
+    needs: golangci
+    uses: TykTechnologies/github-actions/.github/workflows/sonarcloud.yaml@main
+    with:
+      exclusions: ""
+    secrets: inherit
